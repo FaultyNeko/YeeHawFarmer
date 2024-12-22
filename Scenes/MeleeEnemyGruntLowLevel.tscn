@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm1lye7d65k1n"]
+
+[ext_resource type="Script" path="res://Scripts/Enemies/MeleeGruntLowLevel.gd" id="1_ngf27"]
+[ext_resource type="Texture2D" uid="uid://ci2kbhpg8niow" path="res://Assets/cookingoilsyering.png" id="1_psi84"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cn6uh"]
+size = Vector2(195, 184)
+
+[node name="MeleeEnemyGruntLowLevel" type="CharacterBody2D"]
+script = ExtResource("1_ngf27")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_psi84")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.5, 4)
+shape = SubResource("RectangleShape2D_cn6uh")

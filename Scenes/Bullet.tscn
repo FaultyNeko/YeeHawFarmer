@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dls6bbg46250a"]
+
+[ext_resource type="Script" path="res://Scripts/bullet.gd" id="1_nsxpb"]
+[ext_resource type="Texture2D" uid="uid://cslg65vv1q4td" path="res://Assets/Cigar.png" id="2_51kkk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_koa1y"]
+
+[node name="Bullet" type="Area2D"]
+script = ExtResource("1_nsxpb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.235, 0.235)
+texture = ExtResource("2_51kkk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_koa1y")
